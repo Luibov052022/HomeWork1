@@ -1,5 +1,4 @@
-﻿//Задача 1: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
-//Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿//Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
 Console.Write("Введите первое число: ");
 string numberstr1 = Console.ReadLine();
@@ -10,11 +9,14 @@ int number2 = int.Parse(numberstr2);
 Console.Write("Введите третье число: ");
 string numberstr3 = Console.ReadLine();
 int number3 = int.Parse(numberstr3);
-if (number1 > number2)
+int max = number1;
+if (max < number2)
 {
-    Console.WriteLine($"Число {number1} больше чем число {number2}" );
+    max = number2;
 }
-else 
+if (max < number3)
 {
-    Console.WriteLine($"Число {number2} больше чем число {number1}" );
+    max = number3;
 }
+
+Console.WriteLine($"Максимальное из трех чисел - {max} " );
