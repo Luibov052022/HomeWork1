@@ -3,12 +3,13 @@
 Console.Write("Введите число: ");
 string numberstr = Console.ReadLine();
 int number = int.Parse(numberstr);
-while(number > 1)
+int i = 1;
+while(i < number + 1)
 {
-    if (number % 2 == 0)
+    if (i % 2 == 0)
     {
-    Console.Write($"{number}, " );
-        }
-    number = number - 1;
+    Console.Write($"{i}, " );
+    }
+    i++;
 }
 
